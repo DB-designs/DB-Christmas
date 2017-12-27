@@ -42,7 +42,7 @@
 /*-------------------------------------------------------*/
 
 #lolgo { 
-	background-image: url('/static/logo/new_logo_blue.png');
+	background-image: url('https://danishbits.org/static/logo/new_logo_blue.png');
 	background-repeat: no-repeat; background-position: 0px 15px; width: 800px; height: 135px; margin: 0 auto; background-position: 0px 15px;
  }
 #linktorrent {
