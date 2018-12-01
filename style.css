@@ -1,4 +1,4 @@
-/* [START: main.css] - v0.2.7
+/* [START: style.css] - v0.2.1
 /* Layout (Torrents page) */
 
 #lolgo {
@@ -221,7 +221,7 @@ ul.thin li {
 }
 
 #content {
-	margin-top: 90px;
+	margin-top: 110px;
 	width: 100%;
 	min-width: 1000px;
 	overflow: hidden;
@@ -235,19 +235,26 @@ ul.thin li {
     vertical-align: bottom;
 }
 
-#logo {
+#logocenter {
 	width: 800px;
-	height: 135px;
-	margin: 0 auto;
-	background-position: 0px 15px;
+    margin: 0 auto;
 }
 
-#logo a {
-	border: none;
-	width: 800px;
-	height: 135px;
-	display: block;
-}
+#logo {
+  width: 259px;
+  height: 62px;
+  background: url(https://i.imgur.com/W1b6om4.png) no-repeat top left;
+  margin-left: -129.5px;
+  position: absolute;
+  z-index: 2;
+  background-size: 259px 62px;
+  left: 50%;
+  top: 66px; }
+  #logo a {
+    border: none;
+    width: 259px;
+    height: 62px;
+    display: block; }
 
 #logo a:hover {
 	border: none;
@@ -256,7 +263,7 @@ ul.thin li {
 #menu {
 	display: block;
 	height: 70px;
-	background: #151a38;
+	background: rgba(19, 23, 45, 0.5);
 	position: absolute;
 	overflow: hidden;
 	text-align: center;
@@ -267,6 +274,7 @@ ul.thin li {
 	font: 14px/40px Tahoma, Verdana, sans-serif;
 	border: 0px;
 	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 	-moz-border-image: -moz-linear-gradient(right, #7c4a93 0%, #3c31aa 50%, #427a8a 100%);
 	-webkit-border-image: -webkit-linear-gradient(right, #7c4a93 0%, #3c31aa 50%, #427a8a 100%);
 	border-image: linear-gradient(to left, #7c4a93 0%, #3c31aa 50%, #427a8a 100%);
@@ -302,15 +310,6 @@ ul.thin li {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-#userinfo img {
-	margin-top: -5px;
-}
-
-#userinfo ul {
-	display: inline;
-	margin: 0px 0.1%;
 }
 
 #searchbars {
@@ -463,26 +462,6 @@ input.hidden {
 	width: 90%;
 	max-width: 890px;
 	margin: 0px auto;
-}
-
-.user_stat_pics {
-	top: 4px;
-}
-
-#userinfo_username .brackets:before {
-	content: "[";
-}
-
-#userinfo_username .brackets:after {
-	content: "]";
-}
-
-#userinfo_minor .brackets:before {
-	content: "[";
-}
-
-#userinfo_minor .brackets:after {
-	content: "]";
 }
 
 div.linkbox {
@@ -1214,14 +1193,9 @@ span.powerleech {
 /* Layout (Every page) */
 
 #header {
-	background: #13172d;
+	background: rgba(19, 23, 45, 0.5);
 	border-bottom: #151515;
 	height: 160px;
-}
-
-#userinfo {
-	color: #e2e2e2;
-	width: 650px;
 }
 
 .box {
@@ -1229,7 +1203,7 @@ span.powerleech {
 	border: 1px solid #101010;
 	box-shadow: 0 0 5px #0F8A5F;
 	border: 1px solid #0F8A5F;
-}
+}¤
 
 .boxc {
 	height: inherit;
@@ -1253,7 +1227,7 @@ span.powerleech {
 }
 
 .searchtable tr {
-	background: rgb(107, 5, 5);
+	background: rgba(123, 8, 8, 1);
 }
 
 .searchtable .spacer, .searchtable .fspacer {
@@ -1276,11 +1250,11 @@ table {
 
 tr {
 	border: 0;
-	background-color: rgba(38, 49, 109, 0.05);
+	background-color: rgba(27, 8, 8, 0.2);
 }
 
 tr:nth-child(odd) {
-	background-color: rgba(27, 8, 8, 0.2);
+	background-color: rgba(38, 49, 109, 0.05);
 }
 
 #torrents tr.sticky {
@@ -1427,229 +1401,11 @@ tr.unreadpm {
 	background-color: black;
 }
 
-#userinfo {
-	position: absolute;
-	top: 20px;
-	right: 0px;
-	clear: left;
-	height: 120px;
-}
-
-#userinfo ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	/* Make sure text is readable when it overlaps the header on small resolutions */
-	background: #13172d;
-}
-
-#userinfo li {
-	margin: 0;
-}
-
-#userinfo #userinfo_username {
-	display: block;
-	width: 300px;
-	position: absolute;
-	top: 0px;
-	right: 30px;
-	background: none;
-}
-
-#userinfo #userinfo_username li {
-	display: block;
-	text-align: right;
-}
-
-#userinfo_username a.username {
-	line-height: 24px;
-	font-size: 16px;
-	position: relative;
-	top: -5px;
-	font-weight: bold;
-	text-align: right;
-	background: #13172d;
-}
-
-#userinfo #userinfo_username .user_stat_pics {
-	float: right;
-	line-height: 8px !important;
-	margin-left: 5px;
-}
-
-#userinfo #userinfo_username .brackets {
-	display: block;
-	float: right;
-	position: relative;
-}
-
-#userinfo #userinfo_username a.new-subscriptions {
-	display: block;
-	float: right;
-	position: relative;
-	text-indent: 101%;
-	overflow: hidden;
-	width: 12px;
-	height: 12px;
-	background: url('images/icons.png') -48px 0;
-	margin: 0;
-	position: relative;
-	right: 14px;
-	top: -3px;
-	animation: blink 1s steps(5, start) infinite;
-	-webkit-animation: blink 1s steps(5, start) infinite;
-}
-
-#userinfo #userinfo_username a.new-subscriptions2 {
-	display: block;
-	float: right;
-	position: relative;
-	text-indent: 101%;
-	overflow: hidden;
-	width: 12px;
-	height: 12px;
-	background: url('images/icons.png') -48px 0;
-	margin: 0;
-	position: relative;
-	right: 14px;
-	top: -3px;
-}
-
-@keyframes blink {
-	to {
-		visibility: hidden;
-	}
-}
-
-@-webkit-keyframes blink {
-	to {
-		visibility: hidden;
-	}
-}
-
-#userinfo #userinfo_username .brackets:before, #userinfo #userinfo_username .brackets:after {
-	content: "";
-}
-
 
 /* RSS Icon */
 
-#userinfo_major .user_stat_pics {
-	position: absolute;
-	right: 55px;
-	top: -61px;
-	clear: left;
-}
-
 /* Remove the old icons */
-#stats_seeding a img, #stats_leeching a img {
-	width: 0;
-	height: 0;
-}
 
-#userinfo_stats {
-	position: absolute;
-	top: 60px;
-	right: 0px;
-	z-index: 2;
-}
-
-#userinfo_stats li {
-	position: relative;
-	display: block;
-	line-height: 20px;
-	vertical-align: middle;
-	float: left;
-	margin: 0 2px 0 2px;
-}
-
-#stats_seeding.user_stat_pics, #stats_leeching.user_stat_pics {
-	display: block;
-	float: left;
-	width: 12px;
-	height: 12px;
-	background: url('images/icons.png');
-}
-
-#stats_seeding.user_stat_pics {
-	background-position: -12px 0;
-}
-
-#stats_seeding .stat {
-	display: block;
-	padding-right: 10px;
-	border-right: 1px dashed #3a3a3a;
-	margin-right: 5px;
-	height: 20px;
-}
-
-#stats_leeching.user_stat_pics {
-	background-position: -24px 0;
-}
-
-#stats_ratio {
-	border-left: 1px dashed #3a3a3a;
-	padding-left: 10px;
-	margin-left: 10px !important;
-}
-
-#stats_ratio .ratio_text {
-	overflow: hidden;
-	white-space: nowrap;
-	text-indent: 101%;
-	display: block;
-	float: left;
-	background: url('images/icons.png');
-	width: 12px;
-	height: 12px;
-	position: relative;
-	top: 4px;
-	margin-right: 4px;
-}
-
-#stats_connectable {
-	border-left: 1px dashed #3a3a3a;
-	padding: 0 0 0 10px;
-	margin: 0 0 0 5px !important;
-}
-
-#stats_spin {
-	border-left: 1px dashed #3a3a3a;
-	padding: 0 0 0 10px;
-	margin: 0 0 0 5px !important;
-}
-
-#stats_skrab {
-	border-left: 1px dashed #3a3a3a;
-	padding: 0 0 0 10px;
-	margin: 0 0 0 5px !important;
-}
-
-#stats_connectable font[color=green] {
-	color: #418B00;
-}
-
-#userinfo_major {
-	position: absolute;
-	top: 84px;
-	right: 12px;
-	z-index: 2;
-}
-
-#userinfo_major li {
-	float: left;
-	padding: 0 5px 0 5px;
-	border-left: 1px dashed #3a3a3a;
-}
-
-#userinfo_major li:first-child, #userinfo_major li.user_stat_pics {
-	border-left: 0;
-}
-
-#userinfo a:hover {
-	color: white;
-}
 
 #nav_donate font {
 	color: #afafaf !important;
@@ -1716,7 +1472,8 @@ tr.unreadpm {
 
 #lolgo {
 	position: absolute;
-	left: 0;
+	/*left: 0;*/
+	top: 20px;
 }
 
 #request_table a {
@@ -1839,10 +1596,6 @@ tr.unreadpm {
 @media screen and (max-width: 1200px) {
 	#menu ul {
 		margin-left: 10px;
-	}
-	#userinfo_stats {
-		width: 288px;
-		top: 40px;
 	}
 	#stats_spin {
 		border-left: 0;
@@ -2109,3 +1862,61 @@ li#nav_donate span {
 }
 
 /*-------------------------------------------------------*/
+
+#extra2{
+	background: url(https://zytex.dk/db-christmas/images/DB_juletema_guirlander1_216.png) transparent repeat-x center top;
+	position: absolute;
+	top: 195px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+/*-------------------------------------------------------*/
+
+div#userinfo ul {
+  display: inline-block;
+  padding: 0 2px; }
+
+div#userinfo ul li {
+  padding: 0 2px; }
+
+ #userinfo {
+  position: absolute;
+  color: #9a9a9a;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 11px; }
+
+#userinfo_stats li span {
+  color: #9a9a9a; }
+
+#userinfo_minor li a {
+  color: #f7f7f7; }
+
+#userinfo_stats li span.stat span.tooltip {
+  color: #41a85f; }
+
+li#nav_subscriptions a {
+  color: #b39770; }
+
+#userinfo img {
+  margin-top: -5px; }
+
+#userinfo ul li {
+  display: inline-block;
+  margin: 0 0.1em;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 0px; }
+
+#userinfo a,
+#alerts a {
+  color: #f7f7f7; }
+
+#userinfo b a {
+  font-weight: normal;
+  font-size: 0.9em; }
